@@ -1,0 +1,5 @@
+<%= form_with model: @post, local: true do |f|%>
+<%= f.text_field :content %>
+<%= f.attachment_field :image %>
+<%= f.submit "更新" %>
+<% end %>

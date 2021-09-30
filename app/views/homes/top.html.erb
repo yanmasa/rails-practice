@@ -1,0 +1,7 @@
+<h1>topページ</h1>
+<%= link_to "投稿画面", new_micropost_path %>
+<% @posts.each do | post | %>
+  <p><%= "#{post[:content]}" %></p>
+  <%= attachment_image_tag post, :image, :fill, 300, 300, format:'jpeg' %>
+  <%= link_to "詳細画面", micropost_path(post.id) %>
+<% end %>

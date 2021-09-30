@@ -1,0 +1,6 @@
+<%= "id:#{@post.id}"%>
+<%= "content:#{@post.content}" %>
+<%= attachment_image_tag @post, :image, :fill, 300, 300, format:'jpeg' %>
+<%= "作成日時:#{@post.created_at}" %>
+<%= "編集日時:#{@post.updated_at}" %>
+<%= link_to "編集", edit_micropost_path(@post.id) %>
